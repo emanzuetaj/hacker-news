@@ -4,13 +4,15 @@ import uiRouter from '@uirouter/angularjs';
 import ngMaterial from 'angular-material';
 import appComponent from './app.component';
 import ComponentsModule from './components/components';
+import Stories from './services/stories/stories';
 import 'angular-material/angular-material.css';
 import 'normalize.css';
 import '../favicon.ico';
 
 angular.module('app', [
-  'ui.router',
+  uiRouter,
   ComponentsModule.name,
+  Stories,
   ngMaterial
 ])
 .config(($urlRouterProvider) => {

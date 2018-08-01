@@ -6,15 +6,19 @@ class feedController {
       this.totalPages = 0;
       this.currentPage = 0;
       this.doneLoading = false;
-      // currently only working on first fire
-      $scope.$watch(() => this.currentPage, function (val) {
-        console.log(val);
-      }).bind(this);
+      this._$scope = $scope;
+      this._$scope.$watch(() => this.currentPage, this.watchCurrentPage());
+      this._$scope.$parent.$parent.$ctrl.currentPage = 'Front Page';
+
     }
     $onInit() {
       // let's get first page of results
       this.currentPage = 1;
-      this.getFrontPageStories();
+    }
+    watchCurrentPage() {
+      return () => {
+        this.getFrontPageStories();
+      }
     }
     getFrontPageStories() {
       this.StoriesService.getFrontPageStories(this.currentPage - 1).then(
@@ -33,14 +37,6 @@ class feedController {
       for(let i = 0; i < this.stories.length; i++) {
         this.stories[i].points = [this.stories[i].points];
       }
-    }
-    goToNextPage() {
-      this.currentPage++;
-      console.log('goToNextPage()');
-    }
-    goToPreviousPage() {
-      this.currentPage--;
-      console.log('goToPreviousPage()');
     }
   }
 

@@ -1,6 +1,13 @@
 <title>Hacker News - {{$ctrl.currentPage}}</title>
 <div layout="row" layout-fill id="app">
   <div layout="column" layout-fill>
+    <header>
+      <md-toolbar class="md-scroll-shrink md-accent">
+        <div layout="row" layout-align="start center" layout-margin>
+          <h3>Hacker News - {{$ctrl.currentPage}}</h3>
+        </div>
+      </md-toolbar>
+    </header>
     <md-content layout="column" flex layout-padding>
       <div flex>
         <ui-view layout-fill></ui-view>

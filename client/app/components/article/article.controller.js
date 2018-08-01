@@ -1,6 +1,8 @@
 class articleController {
-    constructor() {
-      this.name = 'article';
+    constructor($scope) {
+      "ngInject";
+      this._$scope = $scope;
+      this._$scope.$parent.$parent.$ctrl.currentPage = 'Comments';
     }
   }
 

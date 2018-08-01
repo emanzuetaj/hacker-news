@@ -1,6 +1,10 @@
 class storylineController {
-    constructor() {
-      this.name = 'storyline';
+    constructor($state) {
+      "ngInject";
+      this._$state = $state;
+    }
+    goToArticle() {
+      this._$state.go('article', {articleId: this.id});
     }
   }
 

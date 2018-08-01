@@ -1,5 +1,5 @@
 <div layout="row" layout-align="center center">
-    <md-button ng-click="$ctrl.prev()" ng-disabled="$ctrl.current === 1">Prev</md-button>
+    <md-button ng-click="$ctrl.goToPreviousPage()" ng-disabled="$ctrl.current === 1">Prev</md-button>
     {{$ctrl.current}} of {{$ctrl.total}}
-    <md-button ng-click="$ctrl.next()" ng-disabled="$ctrl.current === $ctrl.total">Next</md-button>
+    <md-button ng-click="$ctrl.goToNextPage()" ng-disabled="$ctrl.current === $ctrl.total">Next</md-button>
 </div>

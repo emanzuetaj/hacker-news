@@ -6,9 +6,7 @@ let paginationComponent = {
   restrict: 'E',
   bindings: {
     current: '<',
-    total: '<',
-    next: '<',
-    prev: '<'
+    total: '<'
   },
   template,
   controller,

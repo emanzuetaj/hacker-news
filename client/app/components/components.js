@@ -1,8 +1,8 @@
+import angular from 'angular';
+    import ArticleModule from './article/article.module';    import FeedModule from './feed/feed.module';
 
-        import angular from 'angular';
+const ComponentsModule = angular.module('app.components',[
+       ArticleModule.name,      FeedModule.name 
+]);
 
-        const ComponentsModule = angular.module('app.components', [
-
-      ]);
-
-      export default ComponentsModule;
+export default ComponentsModule;

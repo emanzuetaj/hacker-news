@@ -3,6 +3,7 @@ class AppController {
     'ngInject';
     this._$mdSidenav = $mdSidenav;
     this._$http = $http;
+    this.currentPage = 'Front Page';
   }
   toggleSidenav() {
     this._$mdSidenav('left').toggle();

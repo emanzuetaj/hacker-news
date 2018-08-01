@@ -19,7 +19,7 @@ angular.module('app', [
 })
 .config(($mdThemingProvider) => {
 	'ngInject';
-  $mdThemingProvider.theme('default').primaryPalette('cyan').accentPalette('amber');
+  $mdThemingProvider.theme('default').primaryPalette('deep-orange');
   // Enable browser color
   $mdThemingProvider.enableBrowserColor({
     palette: 'primary'

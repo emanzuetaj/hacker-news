@@ -1,1 +1,16 @@
-<h1> feed works! </h1>
+<md-content ng-show="$ctrl.doneLoading">
+    <div layout="row" layout-align="center center">
+        <md-button ng-click="$ctrl.goToPrev()" ng-disabled="$ctrl.currentPage === 1">Prev</md-button>
+        {{$ctrl.currentPage}} of {{$ctrl.totalPages}}
+        <md-button ng-click="$ctrl.goToNext()" ng-disabled="$ctrl.currentPage === $ctrl.totalPages">Next</md-button>
+    </div>
+    <md-list>
+        <md-list-item class="md-1-line" ng-repeat="item in $ctrl.stories">
+            <div layout="row" layout-align="start center">
+                <md-chips ng-model="item.points" readonly="true" md-removable="false"></md-chips>
+                <span class="pad-r-l-10">[{{item.author}}]</span>
+                <a href="" ng-click="null">{{item.title}}</a>
+            </div>
+        </md-list-item>
+    </md-list>
+</md-content>

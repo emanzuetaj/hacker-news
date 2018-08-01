@@ -7,6 +7,6 @@ let feedComponent = {
   bindings: {},
   template,
   controller,
-  controllerAs: 'feedController'
+  controllerAs: '$ctrl'
 };
 export default feedComponent;

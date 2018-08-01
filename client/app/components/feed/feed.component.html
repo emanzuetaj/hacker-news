@@ -6,11 +6,7 @@
     </div>
     <md-list>
         <md-list-item class="md-1-line" ng-repeat="item in $ctrl.stories">
-            <div layout="row" layout-align="start center">
-                <md-chips ng-model="item.points" readonly="true" md-removable="false"></md-chips>
-                <span class="pad-r-l-10">[{{item.author}}]</span>
-                <a href="" ng-click="null">{{item.title}}</a>
-            </div>
+            <storyline points="item.points" author="item.author" title="item.title" id="item.objectID"></storyline>
         </md-list-item>
     </md-list>
 </md-content>

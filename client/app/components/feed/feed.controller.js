@@ -1,11 +1,15 @@
 class feedController {
-    constructor(StoriesService) {
+    constructor(StoriesService, $scope) {
       "ngInject";
       this.StoriesService = StoriesService;
       this.stories = [];
       this.totalPages = 0;
       this.currentPage = 0;
       this.doneLoading = false;
+      // currently only working on first fire
+      $scope.$watch(() => this.currentPage, function (val) {
+        console.log(val);
+      }).bind(this);
     }
     $onInit() {
       // let's get first page of results
@@ -29,6 +33,14 @@ class feedController {
       for(let i = 0; i < this.stories.length; i++) {
         this.stories[i].points = [this.stories[i].points];
       }
+    }
+    goToNextPage() {
+      this.currentPage++;
+      console.log('goToNextPage()');
+    }
+    goToPreviousPage() {
+      this.currentPage--;
+      console.log('goToPreviousPage()');
     }
   }
 

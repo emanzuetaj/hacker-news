@@ -1,12 +1,9 @@
 <md-content ng-show="$ctrl.doneLoading">
-    <div layout="row" layout-align="center center">
-        <md-button ng-click="$ctrl.goToPrev()" ng-disabled="$ctrl.currentPage === 1">Prev</md-button>
-        {{$ctrl.currentPage}} of {{$ctrl.totalPages}}
-        <md-button ng-click="$ctrl.goToNext()" ng-disabled="$ctrl.currentPage === $ctrl.totalPages">Next</md-button>
-    </div>
+    <pagination current="$ctrl.currentPage" total="$ctrl.totalPages" prev="$ctrl.goToPreviousPage" next="$ctrl.goToNextPage"></pagination>
     <md-list>
         <md-list-item class="md-1-line" ng-repeat="item in $ctrl.stories">
             <storyline points="item.points" author="item.author" title="item.title" id="item.objectID"></storyline>
         </md-list-item>
     </md-list>
+    <pagination current="$ctrl.currentPage" total="$ctrl.totalPages" prev="$ctrl.goToPreviousPage" next="$ctrl.goToNextPage"></pagination>
 </md-content>

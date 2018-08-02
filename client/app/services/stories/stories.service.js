@@ -3,8 +3,8 @@ export default class StoriesService {
       'ngInject';
       this._$http = $http;
       this._$q = $q;
-      this.frontPageStories = 'http://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=15&page=';
-      this.story = 'http://hn.algolia.com/api/v1/items/';
+      this.frontPageStories = 'https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=15&page=';
+      this.story = 'https://hn.algolia.com/api/v1/items/';
     }
     getFrontPageStories(pageNumber) {
       const defer = this._$q.defer();

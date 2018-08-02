@@ -1,4 +1,4 @@
-class articleController {
+class storyController {
     constructor($scope) {
       "ngInject";
       this._$scope = $scope;
@@ -6,4 +6,4 @@ class articleController {
     }
   }
 
-  export default articleController;
+  export default storyController;

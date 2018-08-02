@@ -4,7 +4,7 @@ class storylineController {
       this._$state = $state;
     }
     goToArticle() {
-      this._$state.go('article', {articleId: this.id});
+      this._$state.go('story', {storyId: this.id});
     }
   }
 

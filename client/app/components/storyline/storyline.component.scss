@@ -1,0 +1,4 @@
+// fix to get point chips on same line as author and title
+.md-chips {
+  display: inline-block !important;
+}

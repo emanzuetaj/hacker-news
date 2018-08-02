@@ -9,6 +9,10 @@
       </md-toolbar>
     </header>
     <md-content layout="column" flex layout-padding>
+      <md-toolbar class="md-scroll-shrink" layout="column" layout-align="center center" ng-show="$ctrl.error">
+        <span>An error has occurred. Please click below to retry.</span>
+        <md-button class="md-accent md-raised" ng-click="$ctrl.refresh()">Refresh</md-button>
+      </md-toolbar>
       <div flex>
         <ui-view layout-fill></ui-view>
       </div>

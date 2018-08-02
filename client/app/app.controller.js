@@ -4,14 +4,14 @@ class AppController {
     this._$mdSidenav = $mdSidenav;
     this._$http = $http;
     this.currentPage = 'Front Page';
+    this.error = false;
   }
-  toggleSidenav() {
-    this._$mdSidenav('left').toggle();
-  };
   isWaiting(){
     return this._$http.pendingRequests.length > 0;
   }
-  
+  refresh() {
+    window.location.reload();
+  }
 }
 export default AppController;
  

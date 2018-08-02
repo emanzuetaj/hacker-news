@@ -18,7 +18,7 @@ class storyController {
           this.doneLoading = true;
         },
         (err) => {
-          console.log(response);
+          this._$scope.$parent.$parent.$ctrl.error = true;
         }
       );
     }

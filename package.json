@@ -12,6 +12,7 @@
     "angular-material": "^1.1.10",
     "angular-material-icons": "^0.7.1",
     "angular-mocks": "^1.7.2",
+    "angular-sanitize": "^1.7.2",
     "angular-ui-router": "^0.3.2",
     "babel-core": "^6.26.3",
     "babel-loader": "^6.4.1",

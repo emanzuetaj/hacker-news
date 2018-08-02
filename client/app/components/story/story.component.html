@@ -1,1 +1,22 @@
-<h1> article works! </h1>
+<main ng-show="$ctrl.doneLoading">
+    <div layout="column">
+        <div layout="row" layout-align="start center">
+            <h3> {{$ctrl.story.title}} </h1>
+                &nbsp;
+            [{{$ctrl.story.author}}]
+        </div>
+        <a href="{{$ctrl.story.url}}" target="_new">{{$ctrl.story.url}}</a>
+    </div>
+    <div layout="row">&nbsp;</div>
+    <div ng-repeat="comment in $ctrl.story.children">
+        <comment item="comment"></comment>
+        <md-divider></md-divider>
+    </div>
+</main>
+<!--div layout="row" layout-align="start start">
+        <div>
+        <md-icon class="pointer" md-font-icon="remove" ng-click="comment.collapse = !(comment.collapse)" ng-show="!comment.collapse">remove</md-icon>
+        <md-icon class="pointer" md-font-icon="add" ng-click="comment.collapse = !(comment.collapse)" ng-show="comment.collapse">add</md-icon>
+        [{{comment.author}}]
+        <span ng-bind-html="comment.text" class="align-left"></span></div>
+</div-->

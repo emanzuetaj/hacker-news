@@ -1,14 +1,8 @@
 import angular from 'angular';
-    import StoryModule from './story/story.module';
-    import FeedModule from './feed/feed.module';
-    import StorylineModule from './storyline/storyline.module';
-    import PaginationModule from './pagination/pagination.module';
+    import CommentModule from './comment/comment.module';    import FeedModule from './feed/feed.module';    import PaginationModule from './pagination/pagination.module';    import StoryModule from './story/story.module';    import StorylineModule from './storyline/storyline.module';    import CommentChildModule from './commentChild/commentChild.module';
 
 const ComponentsModule = angular.module('app.components',[
-    StoryModule.name, 
-     FeedModule.name, 
-     StorylineModule.name, 
-     PaginationModule.name 
+       CommentModule.name,      FeedModule.name,      PaginationModule.name,      StoryModule.name,      StorylineModule.name,      CommentChildModule.name 
 ]);
 
 export default ComponentsModule;

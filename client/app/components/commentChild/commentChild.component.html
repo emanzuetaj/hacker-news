@@ -1,0 +1,13 @@
+<div ng-init="$ctrl.item.collapse = false">
+  <md-icon class="pointer" md-font-icon="remove" ng-click="$ctrl.item.collapse = !($ctrl.item.collapse)" ng-hide="$ctrl.item.collapse">remove</md-icon>
+  <md-icon class="pointer" md-font-icon="add" ng-click="$ctrl.item.collapse = !($ctrl.item.collapse)" ng-hide="!$ctrl.item.collapse">add</md-icon>
+  <strong class="gray">[{{$ctrl.item.author}}]</strong>
+  <div ng-hide="$ctrl.item.collapse">
+    <span ng-bind-html="$ctrl.item.text"></span>
+    <article>
+      <article ng-repeat="child in ::$ctrl.item.children">
+        <comment-child item='::child'></comment-child>
+      </article>
+    </article>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 import angular from 'angular';
 import uiRouter from '@uirouter/angularjs';
-
+import ngSanitize from 'angular-sanitize';
 import ngMaterial from 'angular-material';
 import appComponent from './app.component';
 import ComponentsModule from './components/components';
@@ -13,7 +13,8 @@ angular.module('app', [
   uiRouter,
   ComponentsModule.name,
   Stories,
-  ngMaterial
+  ngMaterial,
+  ngSanitize
 ])
 .config(($urlRouterProvider) => {
   'ngInject';

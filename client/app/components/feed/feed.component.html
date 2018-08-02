@@ -1,7 +1,7 @@
 <md-content ng-show="$ctrl.doneLoading">
     <md-list>
         <md-list-item class="md-1-line" ng-repeat="item in $ctrl.stories">
-            <storyline points="item.points" author="item.author" title="item.title" id="item.objectID"></storyline>
+            <storyline points="item.points" author="item.author" header="item.title" id="item.objectID"></storyline>
         </md-list-item>
     </md-list>
     <pagination current="$ctrl.currentPage" total="$ctrl.totalPages"></pagination>

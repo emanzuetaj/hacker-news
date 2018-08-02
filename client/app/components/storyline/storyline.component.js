@@ -7,7 +7,7 @@ let storylineComponent = {
   bindings: {
     points: '<',
     author: '<',
-    title: '<',
+    header: '<',
     id: '<'
   },
   template,
